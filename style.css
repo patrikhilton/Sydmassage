@@ -1370,3 +1370,89 @@ cursor: pointer;
     }
 
 }
+
+/* Klistra in i slutet av projects/Sydmassage/style.css */
+.therapist {
+  background: #faf7f2;
+  padding: clamp(4rem, 9vw, 7rem) 1.5rem;
+}
+.therapist__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+.therapist__label {
+  font-size: .8rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #b08d57;
+  margin: 0 0 1rem;
+}
+.therapist__title {
+  font-family: Georgia, "Times New Roman", serif; /* byt till din rubrikfont */
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: #1e3a2e;
+  margin: 0 0 1.5rem;
+}
+.therapist__text p {
+  line-height: 1.75;
+  color: #444;
+  max-width: 34rem;
+  margin: 0 0 1rem;
+}
+.therapist__facts {
+  list-style: none;
+  padding: 1.25rem 0 0;
+  margin: 1.5rem 0 2rem;
+  border-top: 1px solid #e3dccf;
+  display: grid;
+  gap: .6rem;
+}
+.therapist__facts li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: #1e3a2e;
+  font-weight: 600;
+}
+.therapist__facts li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #b08d57;
+}
+.therapist__btn {
+  display: inline-block;
+  background: #1e3a2e;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.therapist__btn:hover { background: #2c5242; }
+.therapist__btn:focus-visible { outline: 2px solid #b08d57; outline-offset: 3px; }
+
+.therapist__image { margin: 0; }
+.therapist__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Mobil: bilden först, texten under */
+@media (max-width: 800px) {
+  .therapist__inner { grid-template-columns: 1fr; }
+  .therapist__image { order: -1; max-width: 28rem; }
+}
