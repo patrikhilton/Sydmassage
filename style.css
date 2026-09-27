@@ -350,6 +350,21 @@ background-repeat: no-repeat;
     margin-top: 38px;
 }
 
+.hero__benefit {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.5rem;
+  padding: .6rem 1.1rem;
+  background: rgba(255, 255, 255, .85);
+  border: 1px solid #b08d57;
+  font-size: .95rem;
+  font-weight: 600;
+  color: #1e3a2e;
+  text-decoration: none;
+cursor: pointer;
+}
+
 
 /* ========================================
    BUTTONS
@@ -450,6 +465,66 @@ background-repeat: no-repeat;
 
     font-size: 1.05rem;
 }
+
+/* Klistra in i slutet av projects/Sydmassage/style.css */
+.reviews {
+  background: #f3efe7;
+  padding: clamp(4rem, 9vw, 7rem) 1.5rem;
+}
+.reviews__inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.reviews__title {
+  font-family: Georgia, "Times New Roman", serif; /* byt till samma font som dina rubriker */
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #1e3a2e;
+  margin: 0 0 2.5rem;
+}
+.reviews__track { position: relative; min-height: 14rem; }
+.review { margin: 0; animation: reviewFade .5s ease; }
+.review[hidden] { display: none; }
+.review__stars { color: #b08d57; letter-spacing: .2em; font-size: 1.1rem; }
+.review__text { margin: 1.25rem 0; }
+.review__text p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.6;
+  color: #2b2b2b;
+  margin: 0;
+}
+.review__author { font-weight: 600; color: #1e3a2e; }
+.review__author span { font-weight: 400; color: #7a7a7a; margin-left: .35rem; }
+
+.reviews__controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem; margin-top: 2rem;
+}
+.reviews__btn {
+  width: 2.75rem; height: 2.75rem;
+  border: 1px solid #1e3a2e; background: transparent; color: #1e3a2e;
+  font-size: 1.5rem; line-height: 1; cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.reviews__btn:hover { background: #1e3a2e; color: #fff; }
+.reviews__dots { display: flex; gap: .6rem; }
+.reviews__dot {
+  width: .6rem; height: .6rem; padding: 0; border-radius: 50%;
+  border: 1px solid #1e3a2e; background: transparent; cursor: pointer;
+}
+.reviews__dot[aria-current="true"] { background: #1e3a2e; }
+.reviews__btn:focus-visible, .reviews__dot:focus-visible, .reviews__more:focus-visible {
+  outline: 2px solid #b08d57; outline-offset: 3px;
+}
+.reviews__more {
+  display: inline-block; margin-top: 2.5rem;
+  color: #1e3a2e; font-weight: 600; text-underline-offset: 4px;
+}
+@keyframes reviewFade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .review { animation: none; } }
 
 
 /* ========================================
