@@ -1109,6 +1109,9 @@ cursor: pointer;
 ======================================== */
 
 @media (max-width: 760px) {
+        .logo-img {
+        height: 44px;
+    }
 
     .navbar {
         position: relative;
